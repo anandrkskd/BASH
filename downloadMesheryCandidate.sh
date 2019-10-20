@@ -29,9 +29,9 @@ URL="https://github.com/layer5io/meshery/releases/download/${MESHERY_VERSION}/me
 #printf "Downloading %s from %s ..." "$NAME" "$URL"
 #curl -L "$URL" | tar xz
 
-curl -L $URL -o /tmp/meshery.zip
+curl -L ${URL} -o /tmp/meshery.zip
 unzip /tmp/meshery.zip 
-cp $HOME/mehseryctl /usr/local/mesheryctl
+cp ${PWD}/mesheryctl /usr/local/bin/mesheryctl
 
 echo $URL
 echo $MESHERY_VERSION
